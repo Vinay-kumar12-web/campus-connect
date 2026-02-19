@@ -1,12 +1,13 @@
+
 # 🏫 CampusConnect — Complete Setup Guide
 
 A college-exclusive rental & event platform. Students rent items from each other, discover events, chat in real-time, and book everything in one place.
 
----
+
 
 ## 📁 Project Structure
 
-```
+
 campusconnect/
 ├── backend/                  ← Node.js + Express API
 │   ├── models/
@@ -53,9 +54,7 @@ campusconnect/
         ├── App.js             ← Routes
         ├── index.js           ← Entry point
         └── index.css          ← Global styles
-```
 
----
 
 ## ⚙️ Setup Instructions
 
@@ -118,22 +117,22 @@ npm install
 
 # Start the React app
 npm start
-```
+
 
 The app will open at http://localhost:3000
 
----
+
 
 ## 🚀 Running the Full App
 
 You need **two terminals** running at the same time:
 
 | Terminal 1 | Terminal 2 |
-|------------|------------|
+
 | `cd backend && npm run dev` | `cd frontend && npm start` |
 | Runs on port 5000 | Runs on port 3000 |
 
----
+
 
 ## 👤 Creating Admin Account
 
@@ -142,7 +141,7 @@ You need **two terminals** running at the same time:
 3. Find your user → click Edit → change `role` from `"student"` to `"admin"`
 4. Save → Now you can access `/admin`
 
----
+
 
 ## 📸 Image Upload Setup (Optional)
 
@@ -152,7 +151,7 @@ For real image uploads, create a free account at **Cloudinary** (cloudinary.com)
 
 For now, you can paste image URLs directly (upload to imgur.com first).
 
----
+
 
 ## 🌐 Deploying to Production (Free)
 
@@ -169,12 +168,11 @@ For now, you can paste image URLs directly (upload to imgur.com first).
 3. Add env variable: `REACT_APP_API_URL=https://your-render-url.onrender.com`
 4. Deploy! You'll get a URL like `https://campusconnect.vercel.app`
 
----
 
 ## 🔑 API Quick Reference
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
+
 | POST | /api/auth/register | Register |
 | POST | /api/auth/login | Login |
 | GET | /api/listings | All listings |
@@ -184,7 +182,6 @@ For now, you can paste image URLs directly (upload to imgur.com first).
 | GET | /api/events | All events |
 | POST | /api/events | Post event |
 
----
 
 ## 💡 Tips for Development
 
@@ -193,7 +190,6 @@ For now, you can paste image URLs directly (upload to imgur.com first).
 - Use `console.log()` everywhere while learning — it's your best debugging tool
 - The `nodemon` package auto-restarts the server when you change files
 
----
 
 ## 📚 Learning Resources
 
@@ -204,3 +200,5 @@ For now, you can paste image URLs directly (upload to imgur.com first).
 - **freeCodeCamp**: https://freecodecamp.org
 
 Good luck with your project! 🚀
+# campus-connect
+# CampusConnect  A campus marketplace and event platform built using: - React - Node.js - MongoDB Atlas - JWT Auth - Cloudinary Image Upload  Features: - User authentication - Admin dashboard - Item listings - Booking system - Event management  Made by Vinay Kumar f9bdc4ad84c1ce3e5a218e2dcb2c84ef700dc9f9
