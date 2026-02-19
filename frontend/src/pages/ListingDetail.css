@@ -1,0 +1,36 @@
+/* ListingDetail.css */
+.detail-layout { display: grid; grid-template-columns: 1fr 380px; gap: 32px; align-items: flex-start; }
+
+.photo-gallery { margin-bottom: 24px; }
+.photo-main { height: 320px; border-radius: var(--radius); overflow: hidden; background: var(--faint); }
+.photo-main img { width: 100%; height: 100%; object-fit: cover; }
+.photo-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.photo-thumbs { display: flex; gap: 8px; margin-top: 8px; }
+.photo-thumbs img { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s; }
+.photo-thumbs img.thumb-active, .photo-thumbs img:hover { border-color: var(--teal); }
+
+.detail-info { display: flex; flex-direction: column; gap: 16px; }
+.detail-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.detail-title { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; margin-top: 4px; }
+.detail-price { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--teal); text-align: right; }
+.detail-price span { font-size: 0.9rem; font-weight: 400; color: var(--muted); }
+.detail-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.detail-desc { color: var(--ink-3); line-height: 1.7; font-size: 0.9rem; }
+
+.owner-card { display: flex; align-items: center; gap: 12px; background: var(--faint); border-radius: var(--radius-sm); padding: 16px; }
+
+.booking-card { padding: 24px; }
+.booking-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.booking-header h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; }
+.booking-price { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--teal); }
+.booking-price span { font-size: 0.85rem; font-weight: 400; color: var(--muted); }
+.booking-form { display: flex; flex-direction: column; gap: 14px; }
+
+.price-calc { background: var(--faint); border-radius: var(--radius-sm); padding: 14px; }
+.price-row { display: flex; justify-content: space-between; font-size: 0.875rem; padding: 4px 0; }
+.price-divider { height: 1px; background: var(--border); margin: 8px 0; }
+.price-total { font-size: 1rem; font-weight: 700; }
+
+@media (max-width: 900px) {
+  .detail-layout { grid-template-columns: 1fr; }
+}

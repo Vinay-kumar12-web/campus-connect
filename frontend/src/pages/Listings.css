@@ -1,0 +1,53 @@
+.listings-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+
+/* ─── Search bar ──────────── */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 6px 6px 16px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.search-bar:focus-within { border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-glow); }
+.search-icon { font-size: 1rem; color: var(--muted); flex-shrink: 0; }
+.search-input { flex: 1; border: none; outline: none; font-size: 0.9rem; background: transparent; color: var(--ink); }
+.search-input::placeholder { color: #9ca3af; }
+
+/* ─── Category pills ──────── */
+.category-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+
+.pill {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: white;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.pill:hover { border-color: var(--teal); color: var(--teal); }
+.pill-active { background: var(--teal); color: white; border-color: var(--teal); font-weight: 600; }
+
+/* ─── Listing card extras ─── */
+.listing-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 12px; line-height: 1.4; }
+
+.listing-condition {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}

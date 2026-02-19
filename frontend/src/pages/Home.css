@@ -1,0 +1,150 @@
+.home-page { display: flex; flex-direction: column; gap: 48px; }
+
+/* ─── Hero ────────────────── */
+.home-hero {
+  background: linear-gradient(135deg, #0c1a2e 0%, #0d2a48 100%);
+  border-radius: var(--radius-lg);
+  padding: 48px 48px 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.home-hero::before {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14,165,233,0.2) 0%, transparent 70%);
+  right: -60px; top: -60px;
+}
+
+.hero-greeting { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 6px; }
+
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 36px;
+}
+.hero-title span { color: var(--teal); }
+
+.hero-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-action-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-action-card:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+  border-color: rgba(14,165,233,0.4);
+}
+
+.hac-icon { font-size: 1.6rem; margin-bottom: 4px; }
+.hac-label { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: white; }
+.hac-sub { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+
+/* ─── Sections ────────────── */
+.home-section { display: flex; flex-direction: column; gap: 16px; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ─── Listing cards ───────── */
+.listing-card { cursor: pointer; }
+
+.listing-img {
+  position: relative;
+  height: 180px;
+  background: var(--faint);
+  overflow: hidden;
+}
+.listing-img img { width: 100%; height: 100%; object-fit: cover; }
+.listing-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--muted);
+}
+
+.listing-price {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  background: var(--ink);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+}
+
+.listing-body { padding: 16px; }
+.listing-category { font-size: 0.72rem; text-transform: uppercase; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; margin-bottom: 4px; }
+.listing-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.listing-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--muted); }
+.listing-owner { display: flex; align-items: center; gap: 6px; }
+.listing-location { font-size: 0.75rem; }
+
+/* ─── Event cards ─────────── */
+.events-row { display: flex; flex-direction: column; gap: 12px; }
+
+.event-card {
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 20px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.event-card:hover { box-shadow: var(--shadow); transform: translateX(4px); }
+
+.event-date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--teal-glow);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  min-width: 56px;
+  flex-shrink: 0;
+}
+.event-day { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--teal); line-height: 1; }
+.event-month { font-size: 0.7rem; font-weight: 700; color: var(--teal-dark); text-transform: uppercase; }
+
+.event-info { flex: 1; }
+.event-info h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin: 6px 0 4px; }
+.event-info p { font-size: 0.8rem; color: var(--muted); }
+.event-interested { margin-top: 4px; font-size: 0.78rem; color: var(--muted); }
+
+@media (max-width: 900px) {
+  .hero-actions { grid-template-columns: repeat(2, 1fr); }
+  .hero-title { font-size: 1.8rem; }
+}
+@media (max-width: 600px) {
+  .home-hero { padding: 28px 20px; }
+  .hero-actions { grid-template-columns: repeat(2, 1fr); }
+}
